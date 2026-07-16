@@ -1,0 +1,150 @@
+body{
+    background: linear-gradient(180deg, #552583, #FDB927);
+    height: 43.95em;
+    margin: 0;
+    overflow-y: auto;
+}
+
+header{
+    position: absolute;
+    align-content: center;
+    justify-content: center;
+    margin-left: 50px;
+    top: -20px;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    margin-top: 30px;
+    margin-left: 110px;
+}
+
+h1:hover{
+    color: black;
+}
+
+nav{
+    display: inline;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-style: italic;
+}
+
+a{
+    margin-left: 170px;
+    justify-content: space-between;
+    flex-direction: row;
+    text-decoration: none;
+    color: black;
+}
+
+a.título:hover{
+    text-decoration-color: black;
+}
+
+a:hover{
+    color: blue;
+    text-decoration: underline;
+}
+
+hr{
+    margin-left: 120px;
+    width: 155vh;
+    background-color: #F0E68C;
+    height: 3px;
+    border: none;
+}
+
+img#Cleveland{
+    margin-left: 100px;
+    margin-top: 300px;
+    width: 175px;
+}
+
+img#Seta1{
+    width: 150px;
+    margin-top: 50px;
+}
+
+img#Miami{
+    margin-left: 30px;
+    width: 175px;
+}
+
+img#Seta2{
+    width: 150px;
+    margin-top: 50px;
+}
+
+img#Cavaliers{
+    margin-left: 30px;
+    width: 175px;
+}
+
+img#Seta3{
+    width: 150px;
+    margin-top: 50px;
+}
+
+img#Lakers{
+    position: absolute;
+    margin-top: 220px;
+    width: 275px;
+}
+
+p#Cleveland1{
+    margin-left: 50px;
+    margin-bottom: 400px;
+    border: solid 1px #6F263D;
+    border-radius: 5px;
+    background-color: #FFB81C;
+    width: 215px;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px;
+    color: #000000;
+}
+
+p#Miami1{
+    margin-left: 415px;
+    margin-top: -475px;
+    border: solid 1px #000000;
+    border-radius: 5px;
+    background-color: #98002E;
+    width: 215px;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px;
+    color: #FFFFFF;
+}
+
+p#Cleveland2{
+    margin-left: 790px;
+    margin-top: -95px;
+    border: solid 1px #6F263D;
+    border-radius: 5px;
+    background-color: #FFB81C;
+    width: 215px;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px;
+    color: #000000;
+}
+
+p#Lakers1{
+    margin-left: 78%;
+    margin-top: -94px;
+    border: solid 1px #FDB927;
+    border-radius: 5px;
+    background-color: #552583;
+    width: 215px;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px;
+    color: #FFFFFF;
+}
