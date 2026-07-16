@@ -1,62 +1,85 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeBron James</title>
     <link rel="shortcut icon" href="img/lebron.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
-    <title>LEBRON JAMES</title>
 </head>
 <body>
+
+    <!-- Cabeçalho -->
     <header>
-        <h1>Lebron James</h1>
-        <br><br>
+        <h1>LeBron James</h1>
         <nav>
-            <a href="pages/biografia.html" target="_parent">Quem é</a>
-            <a href="pages/carreira.html" target="_parent">Carreira</a>
-            <a href="pages/titulos.html" target="_parent">Títulos</a>
-            <a href="pages/estatisticas.html" target="_parent">Estatísticas</a>
-            <hr>
+            <a href="pages/biografia.html">Quem é</a>
+            <a href="pages/carreira.html">Carreira</a>
+            <a href="pages/titulos.html">Títulos</a>
+            <a href="pages/estatisticas.html">Estatísticas</a>
         </nav>
+        <hr>
     </header>
-        <main>
-            <section>
-                <h2>Melhores momentos dele</h2>
-                    <article>
-                        <iframe width="600" height="400" src="https://www.youtube.com/embed/51CHNtNlFR8?si=bc9ccAajPVGdbwuN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <img src="img/Lebron-NFL.jpg" alt="foto do Lebron(NFL)">
-                        <h3>Lebron teve a chance de jogar profissionalmente na NFL, por sua força física e habilidade, mas preferiu ir para a NBA</h3>
-                        <div>
-                            <img src="img/Lebron-James.jpg" alt="foto do Lebron" id="curiosidade2">
-                            <h3 id="curiosidade">LeBron é o único jogador na história da NBA a registrar um triplo-duplo contra todos os 30 times da liga</h3>
-                        </div>
-                    </article>
-            </section>
-            <br><br><br>
-            <section>
-                <h2 id="melhor">Melhor jogo da carreira dele</h2>
-                <br>
-                <article>
-                    <iframe width="1150" height="550" src="https://www.youtube.com/embed/O5PRGB1Khts?si=hsfrMkIsQQPEcht2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen id="jogo"></iframe>
-                </article>
-            </section>
-            <br><br><br>
-            <section>
-                <article>
-                    <h4 id="idolos">Ídolos dele</h4>
-                    <img src="img/Michael-Jordan.png" alt="foto do Jordan" id="Michael">
-                    <h3 id="Jordan">Michael Jordan</h3>
-                    <img src="img/Kobe-Bryant.jpg" alt="foto do Kobe" id="Kobe">
-                    <h3 id="Bryant">Kobe Bryant</h3>
-                    <img src="img/Magic-Johnson.jpg" alt="foto do Magic " id="Magic">
-                    <h3 id="Johnson">Magic Johnson</h3>
-                    <img src="img/Allen-Iverson.jpg" alt="foto do Iverson " id="Allen">
-                    <h3 id="Iverson">Allen Iverson</h3>
-                </article>
-            </section>
-            <footer>
-                <p>Desenvolvido por Samuel Varollo &copy</p>
-            </footer>
-        </main>
+    
+    <main>
+        <!-- Melhores momentos -->
+        <section class="momentos">
+            <h2>Melhores momentos dele</h2>
+            <div class="momentos-container">
+                <iframe src="https://www.youtube.com/embed/51CHNtNlFR8?si=bc9ccAajPVGdbwuN" title="Melhores momentos de LeBron James" allowfullscreen>
+                </iframe>
+
+                <div class="curiosidades">
+                    <div class="card-curiosidade">
+                        <img src="img/Lebron-NFL.jpg" alt="LeBron James">
+                        <h3>LeBron teve a chance de jogar profissionalmente na NFL por sua força física e habilidade, mas preferiu seguir na NBA.</h3>
+                    </div>
+
+                    <div class="card-curiosidade">
+                        <img src="img/Lebron-James.jpg" alt="LeBron James comemorando">
+                        <h3>LeBron é o único jogador da história da NBA a registrar um triplo-duplo contra todas as 30 franquias da liga.</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Melhor jogo -->
+        <section class="melhor-jogo">
+            <h2>Melhor jogo da carreira</h2>
+            <iframe src="https://www.youtube.com/embed/O5PRGB1Khts?si=hsfrMkIsQQPEcht2" title="Melhor jogo da carreira" allowfullscreen>
+            </iframe>
+
+        </section>
+
+        <!-- Ídolos -->
+        <section class="idolos">
+            <h2>Ídolos</h2>
+            <div class="grid-idolos">
+                <div class="idol-card">
+                    <img src="img/Michael-Jordan.png" alt="Michael Jordan">
+                    <h3>Michael Jordan</h3>
+                </div>
+
+                <div class="idol-card">
+                    <img src="img/Kobe-Bryant.jpg" alt="Kobe Bryant">
+                    <h3>Kobe Bryant</h3>
+                </div>
+
+                <div class="idol-card">
+                    <img src="img/Magic-Johnson.jpg" alt="Magic Johnson">
+                    <h3>Magic Johnson</h3>
+                </div>
+
+                <div class="idol-card">
+                    <img src="img/Allen-Iverson.jpg" alt="Allen Iverson">
+                    <h3>Allen Iverson</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por Samuel Varollo &copy;<p>
+    </footer>
 </body>
 </html>
