@@ -275,11 +275,11 @@ main {
     font-size: 1.05rem;
 }
 
-.momentos-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 40px;
-    align-items: start;
+.momentos-grid{
+    display:grid;
+    grid-template-columns: 3fr 1fr;
+    gap:35px;
+    align-items:start;
 }
 
 .video-card {
@@ -336,7 +336,7 @@ main {
 
 .card-curiosidade img {
     width: 100%;
-    height: 240px;
+    height: 200px;
     object-fit: cover;
 }
 
