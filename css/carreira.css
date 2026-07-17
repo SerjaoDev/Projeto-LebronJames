@@ -1,150 +1,158 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 body{
-    background: linear-gradient(180deg, #552583, #FDB927);
-    height: 43.95em;
-    margin: 0;
-    overflow-y: auto;
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(180deg,#552583,#FDB927);
+    color:white;
 }
 
+/*HEADER*/
 header{
-    position: absolute;
-    align-content: center;
-    justify-content: center;
-    margin-left: 50px;
-    top: -20px;
+    text-align:center;
+    padding:30px 20px;
 }
 
-h1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
-    margin-top: 30px;
-    margin-left: 110px;
+.titulo{
+    text-decoration:none;
+    color:inherit;
 }
 
-h1:hover{
-    color: black;
+header h1{
+    font-size:3rem;
+    margin-bottom:25px;
 }
 
+header h1:hover{
+    color:black;
+}
+
+/*MENU*/
 nav{
-    display: inline;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-style: italic;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
 }
 
-a{
-    margin-left: 170px;
-    justify-content: space-between;
-    flex-direction: row;
-    text-decoration: none;
-    color: black;
+nav a{
+    color:black;
+    text-decoration:none;
+    font-style:italic;
+    font-weight:bold;
+    transition:.3s;
 }
 
-a.título:hover{
-    text-decoration-color: black;
-}
-
-a:hover{
-    color: blue;
-    text-decoration: underline;
+nav a:hover{
+    color:blue;
 }
 
 hr{
-    margin-left: 120px;
-    width: 155vh;
-    background-color: #F0E68C;
-    height: 3px;
-    border: none;
+    width:90%;
+    margin:25px auto 0;
+    border:none;
+    height:3px;
+    background:#F0E68C;
 }
 
-img#Cleveland{
-    margin-left: 100px;
-    margin-top: 300px;
-    width: 175px;
+/*MAIN*/
+main{
+    width:min(1200px,90%);
+    margin:auto;
 }
 
-img#Seta1{
-    width: 150px;
-    margin-top: 50px;
+h2{
+    text-align:center;
+    margin:60px 0;
+    color:white;
 }
 
-img#Miami{
-    margin-left: 30px;
-    width: 175px;
+/*LINHA DO TEMPO*/
+.timeline{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:25px;
 }
 
-img#Seta2{
-    width: 150px;
-    margin-top: 50px;
+.time-card{
+    width:220px;
+    background:#FFB81C;
+    color:black;
+    border-radius:12px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+    transition:.3s;
 }
 
-img#Cavaliers{
-    margin-left: 30px;
-    width: 175px;
+.time-card:hover{
+    transform:translateY(-8px);
 }
 
-img#Seta3{
-    width: 150px;
-    margin-top: 50px;
+.time-card img{
+    width:140px;
+    height:auto;
+    margin-bottom:15px;
 }
 
-img#Lakers{
-    position: absolute;
-    margin-top: 220px;
-    width: 275px;
+.time-card p{
+    font-size:1.2rem;
+    font-weight:bold;
 }
 
-p#Cleveland1{
-    margin-left: 50px;
-    margin-bottom: 400px;
-    border: solid 1px #6F263D;
-    border-radius: 5px;
-    background-color: #FFB81C;
-    width: 215px;
-    font-size: 25px;
-    font-weight: bold;
-    padding: 5px;
-    color: #000000;
+.heat{
+    background:#98002E;
+    color:white;
 }
 
-p#Miami1{
-    margin-left: 415px;
-    margin-top: -475px;
-    border: solid 1px #000000;
-    border-radius: 5px;
-    background-color: #98002E;
-    width: 215px;
-    font-size: 25px;
-    font-weight: bold;
-    padding: 5px;
-    color: #FFFFFF;
+.lakers{
+    background:#552583;
+    color:white;
+    border:2px solid #FDB927;
 }
 
-p#Cleveland2{
-    margin-left: 790px;
-    margin-top: -95px;
-    border: solid 1px #6F263D;
-    border-radius: 5px;
-    background-color: #FFB81C;
-    width: 215px;
-    font-size: 25px;
-    font-weight: bold;
-    padding: 5px;
-    color: #000000;
+.seta{
+    width:70px;
 }
 
-p#Lakers1{
-    margin-left: 78%;
-    margin-top: -94px;
-    border: solid 1px #FDB927;
-    border-radius: 5px;
-    background-color: #552583;
-    width: 215px;
-    font-size: 25px;
-    font-weight: bold;
-    padding: 5px;
-    color: #FFFFFF;
+/*TABLET*/
+@media(max-width:992px){
+    .timeline{
+        gap:15px;
+    }
+
+    .time-card{
+        width:180px;
+    }
+}
+
+/*CELULAR*/
+@media(max-width:768px){
+    header h1{
+        font-size:2rem;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .timeline{
+        flex-direction:column;
+    }
+
+    .seta{
+        width:45px;
+        transform:rotate(90deg);
+    }
+
+    .time-card{
+        width:100%;
+        max-width:320px;
+    }
 }
