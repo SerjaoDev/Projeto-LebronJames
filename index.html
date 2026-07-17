@@ -1,113 +1,191 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- Configurações da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>LeBron James | O Rei da NBA</title>
+    <meta name="description"
+        content="Conheça a trajetória de LeBron James, seus títulos, estatísticas, melhores momentos e curiosidades sobre um dos maiores jogadores da história da NBA.">
     <link rel="shortcut icon" href="img/lebron.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- CABEÇALHO -->
-    <header>
-    <div class="container-header">
-        <a href="index.html" class="logo">
-            <h1>LeBron James</h1>
-        </a>
-        <nav>
-            <a href="pages/biografia.html">Quem é</a>
-            <a href="pages/carreira.html">Carreira</a>
-            <a href="pages/titulos.html">Títulos</a>
-            <a href="pages/estatisticas.html">Estatísticas</a>
-        </nav>
-    </div>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <h1>LeBron James</h1>
+            </a>
+            <nav class="navbar">
+                <a href="pages/biografia.html">
+                    Quem é
+                </a>
+                <a href="pages/carreira.html">
+                    Carreira
+                </a>
+                <a href="pages/titulos.html">
+                    Títulos
+                </a>
+                <a href="pages/estatisticas.html">
+                    Estatísticas
+                </a>
+            </nav>
+        </div>
     </header>
 
-    <!-- CONTEÚDO PRINCIPAL-->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="hero-tag">
+                🏀 O Rei da NBA
+            </span>
+            <h2>
+                LeBron James
+            </h2>
+            <p>
+                Conheça a história, os recordes, os títulos e os melhores
+                momentos de um dos maiores atletas da história do basquete.
+            </p>
+            <div class="hero-buttons">
+                <a href="pages/biografia.html" class="btn-primary">
+                    Conheça sua história
+                </a>
+                <a href="#momentos" class="btn-secondary">
+                    Assistir melhores momentos
+                </a>
+            </div>
+        </div>
+    </section>
+
     <main>
-        <section class="momentos">
-            <h2>Melhores momentos dele</h2>
-            <div class="momentos-container">
-                <iframe
-                    src="https://www.youtube.com/embed/51CHNtNlFR8?si=bc9ccAajPVGdbwuN"
-                    title="Melhores momentos de LeBron James"
-                    allowfullscreen>
-                </iframe>
-
-                <div class="curiosidades">
-                    <div class="card-curiosidade">
-                        <img
-                            src="img/Lebron-NFL.jpg"
-                            alt="LeBron James">
-                        <h3>
-                            LeBron teve a chance de jogar profissionalmente
-                            na NFL por sua força física e habilidade,
-                            mas preferiu seguir carreira na NBA.
-                        </h3>
+        <section class="section" id="momentos">
+            <div class="container">
+                <div class="section-title">
+                    <span>Vídeo</span>
+                    <h2>Melhores Momentos</h2>
+                    <p>
+                        Confira algumas das jogadas mais impressionantes da carreira
+                        de LeBron James.
+                    </p>
+                </div>
+                <div class="momentos-grid">
+                    <div class="video-card">
+                        <iframe src="https://www.youtube.com/embed/51CHNtNlFR8?si=bc9ccAajPVGdbwuN"
+                            title="Melhores momentos de LeBron James" loading="lazy"
+                            allowfullscreen></iframe>
                     </div>
 
-                    <div class="card-curiosidade">
-                        <img
-                            src="img/Lebron-James.jpg"
-                            alt="LeBron James comemorando">
-                        <h3>
-                            LeBron é o único jogador da história da NBA
-                            a registrar um triplo-duplo contra
-                            todas as 30 franquias da liga.
-                        </h3>
-                    </div>
+                    <aside class="curiosidades">
+                        <article class="card-curiosidade">
+                            <img src="img/Lebron-NFL.jpg"
+                                alt="LeBron James poderia ter jogado na NFL">
+                            <div class="card-content">
+                                <h3>Poderia ter sido jogador da NFL</h3>
+                                <p>
+                                    Pela força física e velocidade,
+                                    LeBron recebeu convites para jogar
+                                    futebol americano profissional,
+                                    mas decidiu dedicar sua carreira
+                                    exclusivamente ao basquete.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="card-curiosidade">
+                            <img src="img/Lebron-James.jpg"
+                                alt="LeBron James comemorando">
+                            <div class="card-content">
+                                <h3>Recorde Histórico</h3>
+                                <p>
+                                    LeBron é o único atleta da NBA
+                                    a registrar um triplo-duplo
+                                    contra todas as 30 franquias da liga.
+                                </p>
+                            </div>
+                        </article>
+                    </aside>
                 </div>
             </div>
         </section>
 
-        <section class="melhor-jogo">
-            <h2>Melhor jogo da carreira</h2>
-            <iframe
-                src="https://www.youtube.com/embed/O5PRGB1Khts?si=hsfrMkIsQQPEcht2"
-                title="Melhor jogo da carreira de LeBron James"
-                allowfullscreen>
-            </iframe>
+        <section class="section destaque">
+            <div class="container">
+                <div class="section-title">
+                    <span>Partida Histórica</span>
+                    <h2>O Melhor Jogo da Carreira</h2>
+                    <p>
+                        Um dos desempenhos mais memoráveis da história
+                        da NBA protagonizado por LeBron James.
+                    </p>
+                </div>
+                <div class="video-full">
+                    <iframe src="https://www.youtube.com/embed/O5PRGB1Khts?si=hsfrMkIsQQPEcht2"
+                        title="Melhor jogo da carreira de LeBron James"
+                        loading="lazy"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
         </section>
 
-        <section class="idolos">
-            <h2>Ídolos</h2>
-            <div class="grid-idolos">
-                <div class="idol-card">
-                    <img
-                        src="img/Michael-Jordan.png"
-                        alt="Michael Jordan">
-                    <h3>Michael Jordan</h3>
+        <section class="section">
+            <div class="container">
+                <div class="section-title">
+                    <span>Inspirações</span>
+                    <h2>Ídolos de LeBron James</h2>
+                    <p>
+                        Grandes nomes que inspiraram a trajetória
+                        de um dos maiores jogadores de todos os tempos.
+                    </p>
                 </div>
+                <div class="idolos-grid">
+                    <article class="idol-card">
+                        <img src="img/Michael-Jordan.png"
+                            alt="Michael Jordan">
+                        <div class="idol-info">
+                            <h3>Michael Jordan</h3>
+                        </div>
 
-                <div class="idol-card">
-                    <img
-                        src="img/Kobe-Bryant.jpg"
-                        alt="Kobe Bryant">
-                    <h3>Kobe Bryant</h3>
-                </div>
+                    </article>
 
-                <div class="idol-card">
-                    <img
-                        src="img/Magic-Johnson.jpg"
-                        alt="Magic Johnson">
-                    <h3>Magic Johnson</h3>
-                </div>
+                    <article class="idol-card">
+                        <img src="img/Kobe-Bryant.jpg"
+                            alt="Kobe Bryant">
+                        <div class="idol-info">
+                            <h3>Kobe Bryant</h3>
+                        </div>
+                    </article>
 
-                <div class="idol-card">
-                    <img
-                        src="img/Allen-Iverson.jpg"
-                        alt="Allen Iverson">
-                    <h3>Allen Iverson</h3>
+                    <article class="idol-card">
+                        <img src="img/Magic-Johnson.jpg"
+                            alt="Magic Johnson">
+                        <div class="idol-info">
+                            <h3>Magic Johnson</h3>
+                        </div>
+                    </article>
+
+                    <article class="idol-card">
+                        <img src="img/Allen-Iverson.jpg"
+                            alt="Allen Iverson">
+                        <div class="idol-info">
+                            <h3>Allen Iverson</h3>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>
-            Desenvolvido por Samuel Varollo &copy;
-        </p>
+    <footer class="footer">
+        <div class="container">
+            <p>
+                © 2026 • Desenvolvido por
+                <strong>Samuel Varollo</strong>
+            </p>
+        </div>
     </footer>
 </body>
 </html>
