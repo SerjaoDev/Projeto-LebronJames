@@ -1,61 +1,150 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- Configurações -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carreira | LeBron James</title>
     <link rel="shortcut icon" href="../img/carreira.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/carreira.css">
-    <title>Carreira do LeBron James</title>
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header>
-    <div class="container-header">
-        <a href="../index.html" class="logo">
-            <h1>LeBron James</h1>
-        </a>
-        <nav>
-            <a href="biografia.html">Quem é</a>
-            <a href="carreira.html" class="ativo">Carreira</a>
-            <a href="titulos.html">Títulos</a>
-            <a href="estatisticas.html">Estatísticas</a>
-        </nav>
-    </div>
+    <header class="header">
+        <div class="container-header">
+            <a href="../index.html" class="logo">
+                <h1>
+                    LeBron James
+                </h1>
+            </a>
+            <nav>
+                <a href="biografia.html">
+                    Quem é
+                </a>
+                <a href="carreira.html" class="ativo">
+                    Carreira
+                </a>
+                <a href="titulos.html">
+                    Títulos
+                </a>
+                <a href="estatisticas.html">
+                    Estatísticas
+                </a>
+            </nav>
+        </div>
     </header>
 
-    <!-- Conteúdo -->
+    <section class="hero-carreira">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span>
+                🏀 Linha do Tempo
+            </span>
+            <h2>
+                A Carreira de LeBron James
+            </h2>
+            <p>
+                Da primeira escolha do Draft de 2003 até se tornar
+                o maior pontuador da história da NBA.
+            </p>
+        </div>
+    </section>
+
     <main>
-        <section>
-            <h2>Linha do Tempo da Carreira</h2>
+        <section class="carreira-section">
+            <div class="section-title">
+                <span>
+                    Trajetória
+                </span>
+                <h2>
+                    Linha do Tempo
+                </h2>
+                <p>
+                    Conheça todas as equipes pelas quais LeBron James
+                    passou ao longo de sua carreira.
+                </p>
+            </div>
+
             <div class="timeline">
-                <div class="time-card">
+                <article class="time-card">
                     <img src="../img/Cavaliers.png" alt="Cleveland Cavaliers">
-                    <p>Cleveland Cavaliers<br>2003–2010</p>
-                </div>
+                    <h3>
+                        Cleveland Cavaliers
+                    </h3>
+                    <span class="ano">
+                        2003 – 2010
+                    </span>
+                    <p>
+                        Primeira escolha do Draft de 2003.
+                        Conquistou o prêmio de Rookie do Ano,
+                        venceu dois MVPs da temporada e transformou
+                        Cleveland em uma potência da NBA.
+                    </p>
+                </article>
 
-                <img class="seta" src="../img/Seta.png" alt="Seta">
+                <div class="linha"></div>
 
-                <div class="time-card heat">
+                <article class="time-card heat">
                     <img src="../img/Miami-Heat.png" alt="Miami Heat">
-                    <p>Miami Heat<br>2010–2014</p>
-                </div>
+                    <h3>
+                        Miami Heat
+                    </h3>
+                    <span class="ano">
+                        2010 – 2014
+                    </span>
+                    <p>
+                        Formou o histórico Big Three.
+                        Foi bicampeão da NBA,
+                        conquistando dois títulos consecutivos
+                        e dois prêmios de MVP das Finais.
+                    </p>
+                </article>
 
-                <img class="seta" src="../img/Seta.png" alt="Seta">
+                <div class="linha"></div>
 
-                <div class="time-card">
+                <article class="time-card">
                     <img src="../img/Cavaliers.png" alt="Cleveland Cavaliers">
-                    <p>Cleveland Cavaliers<br>2014–2018</p>
-                </div>
+                    <h3>
+                        Cleveland Cavaliers
+                    </h3>
+                    <span class="ano">
+                        2014 – 2018
+                    </span>
+                    <p>
+                        Retornou para sua cidade natal
+                        e liderou a histórica virada sobre
+                        o Golden State Warriors nas Finais de 2016,
+                        conquistando o primeiro título da franquia.
+                    </p>
+                </article>
 
-                <img class="seta" src="../img/Seta.png" alt="Seta">
+                <div class="linha"></div>
 
-                <div class="time-card lakers">
+                <article class="time-card lakers">
                     <img src="../img/Lakers.png" alt="Los Angeles Lakers">
-                    <p>Los Angeles Lakers<br>2018–Presente</p>
-                </div>
+                    <h3>
+                        Los Angeles Lakers
+                    </h3>
+                    <span class="ano">
+                        2018 – Atual
+                    </span>
+                    <p>
+                        Conquistou o título da NBA em 2020
+                        e tornou-se o maior pontuador da
+                        história da liga, consolidando seu legado.
+                    </p>
+                </article>
             </div>
         </section>
     </main>
+
+    <footer>
+        <p>
+            © 2026 • Desenvolvido por
+            <strong>Samuel Varollo</strong>
+        </p>
+    </footer>
 </body>
 </html>

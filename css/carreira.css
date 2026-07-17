@@ -4,193 +4,427 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:linear-gradient(180deg,#552583,#FDB927);
-    color:white;
+    font-family:'Poppins',sans-serif;
+    background: radial-gradient(circle at top, #3d1763, #111 60%);
+    color:#EEE;
+    line-height:1.8;
+    overflow-x:hidden;
 }
 
-/*HEADER*/
-header{
-    position:sticky;
+img{
+    display:block;
+    max-width:100%;
+}
+
+a{
+    text-decoration:none;
+}
+
+:root{
+    --primary:#552583;
+    --secondary:#FDB927;
+    --heat:#98002E;
+    --dark:#111;
+    --card:rgba(255,255,255,.08);
+    --border:rgba(255,255,255,.10);
+    --shadow: 0 20px 45px rgba(0,0,0,.35);
+    --radius:22px;
+}
+
+.header{
+    position:fixed;
     top:0;
+    left:0;
+    width:100%;
     z-index:1000;
-    background:rgba(255,255,255,.95);
-    backdrop-filter:blur(10px);
-    box-shadow:0 3px 12px rgba(0,0,0,.15);
+    background:rgba(10,10,10,.75);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,.08);
 }
 
-/*CONTAINER*/
 .container-header{
-    width:min(1200px,92%);
+    width:min(92%,1250px);
     margin:auto;
+    min-height:90px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    min-height:90px;
 }
 
-/*LOGO*/
 .logo{
-    text-decoration:none;
-    color:#222;
+    color:white;
 }
 
 .logo h1{
-    font-size:2.2rem;
+    font-size:2rem;
     transition:.3s;
 }
 
 .logo:hover h1{
-    color:#FDB927;
+    color:var(--secondary);
 }
 
-/*MENU*/
 nav{
     display:flex;
     gap:35px;
 }
 
 nav a{
-    text-decoration:none;
-    color:#222;
-    font-weight:bold;
-    font-size:1.05rem;
+    color:white;
+    font-weight:600;
     position:relative;
     transition:.3s;
 }
 
-/* Linha inferior */
 nav a::after{
     content:"";
     position:absolute;
     left:0;
-    bottom:-6px;
+    bottom:-8px;
     width:0;
     height:3px;
-    background:#FDB927;
+    border-radius:20px;
+    background:var(--secondary);
     transition:.3s;
 }
 
 nav a:hover{
-    color:#552583;
+    color:var(--secondary);
 }
 
 nav a:hover::after{
     width:100%;
 }
 
-/* Página atual */
 nav a.ativo{
-    color:#552583;
+    color:var(--secondary);
 }
 
 nav a.ativo::after{
     width:100%;
 }
 
-/*MAIN*/
-main{
-    width:min(1200px,90%);
-    margin:auto;
+.hero-carreira{
+    position:relative;
+    height:85vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: url("../img/Lebron.png") center/cover;
 }
 
-h2{
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background: linear-gradient(90deg, rgba(0,0,0,.90), rgba(0,0,0,.45));
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    width:min(90%,900px);
+}
+
+.hero-content span{
+    display:inline-block;
+    color:var(--secondary);
+    background:rgba(253,185,39,.12);
+    border:1px solid rgba(253,185,39,.25);
+    padding:10px 22px;
+    border-radius:50px;
+    margin-bottom:25px;
+}
+
+.hero-content h2{
+    font-size:clamp(2.8rem,6vw,5rem);
+    color:white;
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+.hero-content p{
+    max-width:650px;
+    font-size:1.15rem;
+    color:#DDD;
+}
+
+.carreira-section{
+    width:min(92%,1300px);
+    margin:auto;
+    padding:100px 0;
+}
+
+.section-title{
     text-align:center;
-    margin:60px 0;
+    margin-bottom:70px;
+}
+
+.section-title span{
+    color:var(--secondary);
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+.section-title h2{
+    margin:15px 0;
+    font-size:2.8rem;
     color:white;
 }
 
-/*LINHA DO TEMPO*/
+.section-title p{
+    max-width:700px;
+    margin:auto;
+    color:#BBB;
+}
+
 .timeline{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-wrap:wrap;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    align-items:start;
     gap:25px;
+    position:relative;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    top:115px;
+    left:8%;
+    right:8%;
+    height:4px;
+    background: linear-gradient(90deg, var(--secondary), #ffffff, var(--secondary));
+    z-index:0;
+}
+
+.linha{
+    display:none;
 }
 
 .time-card{
-    width:220px;
-    background:#FFB81C;
-    color:black;
-    border-radius:12px;
-    padding:20px;
+    position:relative;
+    z-index:2;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:35px 28px;
     text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,.3);
-    transition:.3s;
+    backdrop-filter:blur(18px);
+    box-shadow:var(--shadow);
+    transition:.35s ease;
 }
 
 .time-card:hover{
-    transform:translateY(-8px);
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0,0,0,.45);
+}
+
+.time-card::before{
+    content:"";
+    position:absolute;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:var(--secondary);
+    top:-42px;
+    left:50%;
+    transform:translateX(-50%);
+    border:5px solid #111;
 }
 
 .time-card img{
     width:140px;
-    height:auto;
+    height:140px;
+    object-fit:contain;
+    margin:auto;
+    margin-bottom:25px;
+}
+
+.time-card h3{
+    color:white;
+    font-size:1.45rem;
     margin-bottom:15px;
 }
 
+.ano{
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:50px;
+    background:rgba(253,185,39,.15);
+    color:var(--secondary);
+    font-weight:700;
+    margin-bottom:20px;
+}
+
 .time-card p{
-    font-size:1.2rem;
-    font-weight:bold;
+    color:#DDD;
+    font-size:.96rem;
+    text-align:justify;
 }
 
 .heat{
-    background:#98002E;
-    color:white;
+    border-color: rgba(152,0,46,.5);
+}
+
+.heat .ano{
+    background: rgba(152,0,46,.25);
+    color:#FFF;
 }
 
 .lakers{
-    background:#552583;
-    color:white;
-    border:2px solid #FDB927;
+    border: 2px solid var(--secondary);
 }
 
-.seta{
-    width:70px;
+.lakers .ano{
+    background: rgba(85,37,131,.35);
+    color:var(--secondary);
 }
 
-/*TABLET*/
-@media(max-width:992px){
+footer{
+    margin-top:80px;
+    padding:40px 20px;
+    text-align:center;
+    border-top: 1px solid rgba(255,255,255,.10);
+    background: rgba(0,0,0,.25);
+}
+
+footer p{
+    color:#AAA;
+    font-size:.95rem;
+}
+
+footer strong{
+    color:var(--secondary);
+}
+
+@media(max-width:1200px){
     .timeline{
-        gap:15px;
+        grid-template-columns: repeat(2,1fr);
+        gap:40px;
     }
 
-    .time-card{
-        width:180px;
+    .timeline::before{
+        display:none;
+    }
+
+    .time-card::before{
+        display:none;
     }
 }
 
-/*CELULAR*/
-@media(max-width:768px){
+@media(max-width:992px){
     .container-header{
         flex-direction:column;
+        justify-content:center;
+        gap:20px;
         padding:20px 0;
     }
 
     nav{
-        margin-top:20px;
         flex-wrap:wrap;
         justify-content:center;
         gap:18px;
     }
 
-    .logo h1{
-        font-size:1.9rem;
+    .hero-carreira{
+        height:70vh;
+    }
+
+    .hero-content{
+        text-align:center;
+    }
+
+    .hero-content p{
+        margin:auto;
+    }
+
+    .section-title h2{
+        font-size:2.3rem;
+    }
+}
+
+@media(max-width:768px){
+    .hero-carreira{
+        height:60vh;
+    }
+
+    .hero-content h2{
+        font-size:2.4rem;
+    }
+
+    .hero-content p{
+        font-size:1rem;
     }
 
     .timeline{
-        flex-direction:column;
-    }
-
-    .seta{
-        width:45px;
-        transform:rotate(90deg);
+        grid-template-columns:1fr;
+        gap:30px;
     }
 
     .time-card{
+        max-width:420px;
         width:100%;
-        max-width:320px;
+        margin:auto;
+    }
+
+    .time-card img{
+        width:120px;
+        height:120px;
+    }
+
+    .time-card h3{
+        font-size:1.3rem;
+    }
+}
+
+@media(max-width:480px){
+    .logo h1{
+        font-size:1.7rem;
+    }
+
+    nav a{
+        font-size:.9rem;
+    }
+
+    .hero-content span{
+        font-size:.8rem;
+        padding:8px 18px;
+    }
+
+    .hero-content h2{
+        font-size:2rem;
+    }
+
+    .hero-content p{
+        font-size:.9rem;
+    }
+
+    .section-title h2{
+        font-size:2rem;
+    }
+
+    .section-title p{
+        font-size:.95rem;
+    }
+
+    .time-card{
+        padding:25px 20px;
+    }
+
+    .time-card img{
+        width:100px;
+        height:100px;
+    }
+
+    .time-card p{
+        font-size:.9rem;
+    }
+
+    footer{
+        padding:30px 15px;
     }
 }
