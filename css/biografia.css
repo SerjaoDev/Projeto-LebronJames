@@ -372,3 +372,25 @@ tr:hover {
         font-size: .9rem;
     }
 }
+
+::-webkit-scrollbar{
+    width:12px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(180deg, var(--primary), var(--secondary));
+    border-radius:50px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:var(--secondary);
+}
+
+::selection{
+    background:var(--secondary);
+    color:#000;
+}
