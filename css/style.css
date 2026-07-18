@@ -493,14 +493,10 @@ main {
 
 @media(max-width:600px) {
     .logo h1 {
-        font-size: 1.6rem;
+        font-size: 1.7rem;
     }
 
-    .navbar {
-        gap: 15px;
-    }
-
-    .navbar a {
+    nav a {
         font-size: .9rem;
     }
 
