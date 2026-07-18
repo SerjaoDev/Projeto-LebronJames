@@ -68,7 +68,7 @@ body {
     transition: var(--transition);
 }
 
-.header .container {
+.header .container-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -462,16 +462,17 @@ main {
 }
 
 @media(max-width:900px) {
-    .header .container {
-        flex-direction: column;
-        padding: 20px 0;
-        gap: 20px;
+    .container-header{
+        flex-direction:column;
+        justify-content:center;
+        gap:20px;
+        padding:20px 0;
     }
 
-    .navbar {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 22px;
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:18px;
     }
 
     .hero-content {

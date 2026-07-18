@@ -261,16 +261,17 @@ footer strong{
 }
 
 @media(max-width:992px){
-    .header .container {
-        flex-direction: column;
-        padding: 20px 0;
-        gap: 20px;
+    .container-header{
+        flex-direction:column;
+        justify-content:center;
+        gap:20px;
+        padding:20px 0;
     }
 
-    .navbar {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 22px;
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:18px;
     }
 
     .hero-titulos{
@@ -308,7 +309,7 @@ footer strong{
     }
 
     .card{
-        width:420px;
+        max-width:420px;
         margin:auto;
     }
 
