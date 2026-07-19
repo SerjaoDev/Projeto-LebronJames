@@ -229,17 +229,59 @@ main{
     color:#BBB;
 }
 
-.section-tabela{
-    margin-bottom:110px;
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin: 25px 0;
 }
 
-.tabela{
-    overflow-x:auto;
-    border-radius:var(--radius);
-    border:1px solid var(--border);
-    background:var(--card);
-    backdrop-filter:blur(18px);
-    box-shadow:var(--shadow);
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden; 
+}
+
+.stats-table th {
+  background-color: #552583; 
+  color: #FDB927;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  padding: 14px 12px;
+  text-align: center;
+}
+
+.stats-table td {
+  padding: 12px 12px;
+  border-bottom: 1px solid #eeeeee;
+  color: #333333;
+  text-align: center; 
+}
+
+.stats-table tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.stats-table tbody tr:hover {
+  background-color: #f1ecf7; 
+  cursor: pointer;
+}
+
+.stats-table tfoot tr {
+  background-color: #f1f1f1;
+  font-weight: bold;
+  border-top: 2px solid #552583;
+}
+
+.stats-table tfoot td {
+  color: #000000;
+  padding: 15px 12px;
 }
 
 .legado{
