@@ -155,6 +155,24 @@ nav a.ativo{
     z-index:2;
     width:min(92%,1250px);
     margin:auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding-top:95px; 
+}
+
+.hero-content span{
+    display:inline-flex;
+    align-items:center;
+    width:max-content;
+    padding:10px 22px;
+    margin:0 0 28px;
+    border-radius:50px;
+    color:var(--secondary);
+    background:rgba(253,185,39,.12);
+    border:1px solid rgba(253,185,39,.25);
+    font-weight:600;
+    font-size:.95rem;
 }
 
 .hero-tag{
@@ -171,53 +189,17 @@ nav a.ativo{
 }
 
 .hero-content h2{
-    max-width:750px;
-    color:white;
+    margin:0 0 24px;
+    color:#FFF;
     font-size:clamp(2.8rem,6vw,5rem);
-    line-height:1.08;
-    margin-bottom:24px;
+    line-height:1.1;
 }
 
 .hero-content p{
+    margin:0;
     max-width:650px;
     color:#DDD;
     font-size:1.1rem;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-/*BOTÕES*/
-.btn-primary{
-    background: linear-gradient(135deg, #FDB927, #FFD966);
-    color:black;
-    padding:18px 36px;
-    border-radius:999px;
-    font-weight:700;
-    transition:var(--transition);
-    box-shadow: 0 15px 35px rgba(253,185,39,.35);
-}
-
-.btn-primary:hover{
-    transform:translateY(-6px);
-    box-shadow: 0 20px 45px rgba(253,185,39,.45);
-}
-
-.btn-secondary{
-    padding:18px 36px;
-    border-radius:999px;
-    border:2px solid rgba(255,255,255,.25);
-    color:white;
-    transition:var(--transition);
-    backdrop-filter:blur(15px);
-}
-
-.btn-secondary:hover{
-    background:white;
-    color:black;
 }
 
 /*ANIMAÇÕES*/
@@ -641,14 +623,15 @@ button:focus-visible{
 
     .hero-content{
         text-align:center;
+        align-items:center;
+    }
+
+    .hero-content span{
+        margin-bottom:28px;
     }
 
     .hero-content p{
         margin:auto;
-    }
-
-    .hero-buttons{
-        justify-content:center;
     }
 
     .section{
@@ -669,8 +652,17 @@ button:focus-visible{
         font-size:.9rem;
     }
 
+    .hero-content{
+        padding-top:90px;
+    }
+
+    .hero-content span{
+        font-size:.9rem;
+        margin-bottom:24px;
+    }
+
     .hero-content h2{
-        font-size:2.5rem;
+        margin-bottom:20px;
     }
 
     .hero-content p{
@@ -764,8 +756,14 @@ button:focus-visible{
         font-size:.8rem;
     }
 
-    .hero-content h2{
-        font-size:2rem;
+    .hero-content{
+        padding-top:85px;
+    }
+
+    .hero-content span{
+        padding:8px 18px;
+        margin-bottom:22px;
+        font-size:.82rem;
     }
 
     .hero-content p{
