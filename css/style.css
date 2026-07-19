@@ -381,11 +381,12 @@ main {
 
 .card-curiosidade img {
     width:100%;
-    height:240px;
+    height:220px;
     object-fit:contain;
     object-position:center;
-    padding:20px;
-    transition:.35s ease;
+    background:rgba(255,255,255,.03);
+    padding:18px;
+    transition:.35s;
 }
 
 .card-curiosidade:hover img {
