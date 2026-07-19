@@ -66,22 +66,23 @@ a{
     align-items:center;
 }
 
-.logo{
-    display:flex;
-    align-items:center;
-    transition:.3s ease;
+.logo {
+    display: flex;
+    align-items: center;
+    transition: .3s ease;
 }
 
-.logo img{
-    height:60px;
-    width:auto;
-    display:block;
-    transition:.3s ease;
+.logo img {
+    height: 60px;
+    width: auto;
+    display: block;
+    transition: .3s ease;
+    filter: brightness(0) saturate(100%) invert(18%) sepia(50%) saturate(4155%) hue-rotate(256deg) brightness(87%) contrast(92%);
 }
 
-.logo:hover img{
-    transform:scale(1.05);
-    filter:drop-shadow(0 0 12px rgba(253,185,39,.7));
+.logo:hover img {
+    transform: scale(1.05);
+    filter: brightness(0) saturate(100%) invert(84%) sepia(76%) saturate(3015%) hue-rotate(330deg) brightness(101%) contrast(99%) drop-shadow(0 0 12px rgba(253, 185, 39, .7));
 }
 
 nav{
