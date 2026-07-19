@@ -838,6 +838,7 @@ button:focus-visible {
 
 /*REDUZIR ANIMAÇÕES*/
 @media(prefers-reduced-motion:reduce) {
+
     *,
     *::before,
     *::after {
