@@ -119,48 +119,55 @@ nav a.ativo{
     color:var(--secondary);
 }
 
-.hero-estatisticas{
+.hero{
     position:relative;
-    height:85vh;
     display:flex;
     align-items:center;
-    background:url("../img/Lebron-James.jpg") center/cover;
+    min-height:85vh;
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-image: url(../img/Lebron-James.jpg);
 }
 
 .hero-overlay{
     position:absolute;
     inset:0;
-    background:linear-gradient(90deg, rgba(0,0,0,.9), rgba(0,0,0,.45));
+    background:linear-gradient(90deg, rgba(0,0,0,.90), rgba(0,0,0,.55));
 }
 
 .hero-content{
     position:relative;
     z-index:2;
-    width:min(90%,900px);
+    width:min(92%,1250px);
     margin:auto;
 }
 
-.hero-content span{
-    display:inline-block;
-    color:var(--secondary);
+.hero-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 22px;
+    border-radius:999px;
     background:rgba(253,185,39,.12);
     border:1px solid rgba(253,185,39,.25);
-    padding:10px 22px;
-    border-radius:50px;
-    margin-bottom:25px;
+    color:var(--secondary);
+    font-weight:600;
+    margin-bottom:28px;
 }
 
 .hero-content h2{
-    color:#FFF;
+    max-width:750px;
+    color:white;
     font-size:clamp(2.8rem,6vw,5rem);
-    line-height:1.1;
-    margin-bottom:25px;
+    line-height:1.08;
+    margin-bottom:24px;
 }
 
 .hero-content p{
     max-width:650px;
-    font-size:1.15rem;
     color:#DDD;
+    font-size:1.1rem;
 }
 
 main{
@@ -424,8 +431,8 @@ main{
         gap:18px;
     }
 
-    .hero-estatisticas{
-        height:70vh;
+    .hero{
+        min-height:75vh;
     }
 
     .hero-content{
@@ -439,16 +446,19 @@ main{
     .section-title h2{
         font-size:2.3rem;
     }
-
 }
 
 @media(max-width:768px){
-    .hero-estatisticas{
-        height:60vh;
+    .hero{
+        min-height:65vh;
+    }
+
+    .hero-tag{
+        font-size:.9rem;
     }
 
     .hero-content h2{
-        font-size:2.4rem;
+        font-size:2.5rem;
     }
 
     .hero-content p{
@@ -505,13 +515,13 @@ main{
         font-size:.88rem;
     }
 
-    .hero-estatisticas{
-        height:55vh;
+    .hero{
+        min-height:60vh;
     }
 
-    .hero-content span{
-        font-size:.8rem;
+    .hero-tag{
         padding:8px 18px;
+        font-size:.8rem;
     }
 
     .hero-content h2{

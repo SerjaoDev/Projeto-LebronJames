@@ -127,72 +127,55 @@ nav a.ativo{
 }
 
 /*HERO*/
-.hero-titulos{
+.hero{
     position:relative;
-    min-height:100vh;
     display:flex;
     align-items:center;
-    overflow:hidden;
-}
-
-.hero-titulos::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background: url("../img/NBA-2020.png") center center/cover;
-    transform:scale(1.08);
-    filter:brightness(.38);
-}
-
-.hero-titulos::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background: linear-gradient(90deg, rgba(0,0,0,.90), rgba(0,0,0,.55), rgba(0,0,0,.90));
+    min-height:85vh;
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-image: url(../img/Olimpíadas-2024.png);
 }
 
 .hero-overlay{
     position:absolute;
     inset:0;
-    background: radial-gradient(circle at top right, rgba(253,185,39,.20), transparent 35%);
-    z-index:1;
+    background:linear-gradient(90deg, rgba(0,0,0,.90), rgba(0,0,0,.55));
 }
 
 .hero-content{
     position:relative;
-    z-index:5;
+    z-index:2;
     width:min(92%,1250px);
     margin:auto;
-    max-width:720px;
 }
 
-.hero-content span{
+.hero-tag{
     display:inline-flex;
     align-items:center;
     gap:10px;
-    padding:12px 24px;
+    padding:10px 22px;
     border-radius:999px;
-    margin-bottom:28px;
-    color:var(--secondary);
     background:rgba(253,185,39,.12);
-    border:1px solid rgba(253,185,39,.28);
-    backdrop-filter:blur(12px);
+    border:1px solid rgba(253,185,39,.25);
+    color:var(--secondary);
     font-weight:600;
+    margin-bottom:28px;
 }
 
 .hero-content h2{
-    font-size:clamp(3.5rem,8vw,6rem);
-    line-height:1;
-    font-weight:800;
-    margin-bottom:28px;
-    color:#fff;
+    max-width:750px;
+    color:white;
+    font-size:clamp(2.8rem,6vw,5rem);
+    line-height:1.08;
+    margin-bottom:24px;
 }
 
 .hero-content p{
     max-width:650px;
-    color:#dddddd;
-    font-size:1.15rem;
-    line-height:2;
+    color:#DDD;
+    font-size:1.1rem;
 }
 
 /*ANIMAÇÕES*/
@@ -467,7 +450,7 @@ main{
         gap:18px;
     }
 
-    .hero-titulos{
+    .hero{
         min-height:75vh;
     }
 
@@ -485,12 +468,16 @@ main{
 }
 
 @media(max-width:768px){
-    .hero-titulos{
+    .hero{
         min-height:65vh;
     }
 
+    .hero-tag{
+        font-size:.9rem;
+    }
+
     .hero-content h2{
-        font-size:2.6rem;
+        font-size:2.5rem;
     }
 
     .hero-content p{
@@ -550,9 +537,13 @@ main{
         font-size:.88rem;
     }
 
-    .hero-content span{
-        font-size:.82rem;
-        padding:9px 18px;
+    .hero{
+        min-height:60vh;
+    }
+
+    .hero-tag{
+        padding:8px 18px;
+        font-size:.8rem;
     }
 
     .hero-content h2{
@@ -560,8 +551,7 @@ main{
     }
 
     .hero-content p{
-        font-size:.95rem;
-        line-height:1.8;
+        font-size:.9rem;
     }
 
     .section-title h2{
