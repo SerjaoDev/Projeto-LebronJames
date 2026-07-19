@@ -59,48 +59,51 @@ ul{
     top:0;
     left:0;
     width:100%;
-    z-index:999;
+    z-index:1000;
     background:rgba(8,8,8,.55);
     backdrop-filter:blur(18px);
     border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .container-header{
+    width:min(92%,1250px);
+    margin:auto;
     min-height:95px;
     display:flex;
     justify-content:space-between;
     align-items:center;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    transition: .3s ease;
+.logo{
+    display:flex;
+    align-items:center;
+    flex-shrink:0;
 }
 
-.logo img {
-    height: 60px;
-    width: auto;
-    display: block;
-    transition: .3s ease;
+.logo img{
+    display:block;
+    width:auto;
+    height:60px;
+    transition: transform .3s ease, filter .3s ease;
     filter: brightness(0) saturate(100%) invert(18%) sepia(50%) saturate(4155%) hue-rotate(256deg) brightness(87%) contrast(92%);
 }
 
-.logo:hover img {
-    transform: scale(1.05);
-    filter: brightness(0) saturate(100%) invert(84%) sepia(76%) saturate(3015%) hue-rotate(330deg) brightness(101%) contrast(99%) drop-shadow(0 0 12px rgba(253, 185, 39, .7));
+.logo:hover img{
+    transform:scale(1.05);
+    filter: brightness(0) saturate(100%) invert(84%) sepia(76%) saturate(3015%) hue-rotate(330deg) brightness(101%) contrast(99%) drop-shadow(0 0 12px rgba(253,185,39,.7));
 }
 
 nav{
     display:flex;
+    align-items:center;
     gap:40px;
 }
 
 nav a{
     position:relative;
-    color:white;
+    color:#FFF;
     font-weight:600;
-    transition:.3s;
+    transition:color .3s;
 }
 
 nav a::after{
@@ -110,10 +113,10 @@ nav a::after{
     bottom:-10px;
     width:0;
     height:3px;
-    background:var(--secondary);
     transform:translateX(-50%);
-    transition:.35s;
     border-radius:50px;
+    background:var(--secondary);
+    transition:width .35s ease;
 }
 
 nav a:hover{
@@ -547,32 +550,24 @@ main{
 
 /*FOOTER*/
 .footer{
-    position:relative;
-    margin-top:120px;
+    margin-top:100px;
     background:#080808;
     border-top:1px solid rgba(255,255,255,.08);
-    overflow:hidden;
 }
 
-.footer::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:4px;
-    background:linear-gradient(90deg, var(--primary), var(--secondary), var(--primary));
-}
-
-.footer .container{
-    padding:55px 0;
-    text-align:center;
+.container-footer{
+    width:min(92%,1250px);
+    margin:auto;
+    min-height:90px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .footer p{
-    color:#bdbdbd;
-    font-size:1rem;
-    line-height:1.8;
+    color:#AAA;
+    font-size:.95rem;
+    text-align:center;
 }
 
 .footer strong{
@@ -583,19 +578,25 @@ main{
 /*SCROLLBAR*/
 ::-webkit-scrollbar{
     width:12px;
+    height:12px;
 }
 
 ::-webkit-scrollbar-track{
-    background:#111;
+    background:#0D0D0D;
 }
 
 ::-webkit-scrollbar-thumb{
     background:linear-gradient(180deg, var(--primary), var(--secondary));
     border-radius:50px;
+    border:2px solid #0D0D0D;
 }
 
 ::-webkit-scrollbar-thumb:hover{
-    background:var(--secondary);
+    background:linear-gradient(180deg, #6B35A8, #FFD44A);
+}
+
+::-webkit-scrollbar-corner{
+    background:#0D0D0D;
 }
 
 /*SELECTION*/
@@ -628,17 +629,26 @@ button:focus-visible{
     }
 }
 
-@media(max-width:900px){
+@media(max-width:992px){
+    .header{
+        position:relative;
+    }
+
     .container-header{
+        min-height:auto;
         flex-direction:column;
         justify-content:center;
-        gap:20px;
-        padding:20px 0;
+        gap:18px;
+        padding:18px 0;
+    }
+
+    .logo img{
+        height:55px;
     }
 
     nav{
-        flex-wrap:wrap;
         justify-content:center;
+        flex-wrap:wrap;
         gap:18px;
     }
 
@@ -688,6 +698,18 @@ button:focus-visible{
     .idol-card img{
         height:360px;
     }
+
+    .footer{
+        margin-top:80px;
+    }
+
+    .container-footer{
+        min-height:80px;
+    }
+
+    .footer p{
+        font-size:.9rem;
+    }
 }
 
 @media(max-width:600px){
@@ -730,7 +752,19 @@ button:focus-visible{
     }
 }
 
-@media(max-width:430px){
+@media(max-width:480px){
+    .logo img{
+        height:44px;
+    }
+
+    nav{
+        gap:12px;
+    }
+
+    nav a{
+        font-size:.88rem;
+    }
+
     .hero h2{
         font-size:2.5rem;
     }
@@ -752,6 +786,19 @@ button:focus-visible{
         height:300px;
     }
 
+    .footer{
+        margin-top:70px;
+    }
+
+    .container-footer{
+        min-height:75px;
+        padding:0 15px;
+    }
+
+    .footer p{
+        font-size:.85rem;
+        line-height:1.6;
+    }
 }
 
 /*REDUÇÃO DE MOVIMENTO*/
