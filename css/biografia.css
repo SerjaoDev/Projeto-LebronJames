@@ -15,9 +15,16 @@ body {
     font-family: 'Poppins', sans-serif;
     color: #fff;
     overflow-x: hidden;
-    background:
-        radial-gradient(circle at top, #6f3db4 0%, #2b1948 35%, #0d0d0d 100%);
+    background: radial-gradient(circle at top, #6f3db4 0%, #2b1948 35%, #0d0d0d 100%);
     min-height: 100vh;
+}
+
+main,
+section,
+div,
+article,
+aside{
+    max-width:100%;
 }
 
 img {
@@ -133,7 +140,7 @@ nav a.ativo {
     position: relative;
     display: flex;
     align-items: center;
-    min-height: 85vh;
+    min-height: calc(100vh - 95px);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -154,7 +161,8 @@ nav a.ativo {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 95px;
+    padding-top:120px;
+    padding-bottom:40px;
 }
 
 .hero-content span {
@@ -255,7 +263,7 @@ main {
 }
 
 .biografia-section {
-    padding: 90px 0;
+    padding: 70px 0;
 }
 
 /*GRID DA BIOGRAFIA*/
@@ -275,7 +283,7 @@ main {
     backdrop-filter: blur(20px);
     border: 1px solid var(--border);
     border-radius: 28px;
-    padding: 55px;
+    padding: 45px;
     box-shadow: var(--shadow);
     overflow: hidden;
 }
@@ -347,10 +355,10 @@ main {
 }
 
 .perfil-card img {
-    height: 360px;
-    object-fit: cover;
-    object-position: top;
-    transition: .5s;
+    width:100%;
+    height:380px;
+    object-fit:cover;
+    object-position:top;
 }
 
 .perfil-card:hover img {
@@ -375,8 +383,10 @@ main {
 
 /*TABELA*/
 table {
-    width: 100%;
-    border-collapse: collapse;
+    width:100%;
+    border-collapse:collapse;
+    table-layout:fixed;
+    word-break:break-word;
 }
 
 th {
@@ -551,7 +561,7 @@ td:first-child {
     }
 
     .hero {
-        min-height: 75vh;
+        min-height: 65vh;
     }
 
     .hero-content {
@@ -586,7 +596,7 @@ td:first-child {
     }
 
     .hero {
-        min-height: 65vh;
+        min-height: 55vh;
     }
 
     .hero-tag {
@@ -594,7 +604,8 @@ td:first-child {
     }
 
     .hero-content {
-        padding-top: 90px;
+        padding-top:95px;
+        padding-bottom:25px;
     }
 
     .hero-content span {
@@ -611,7 +622,7 @@ td:first-child {
     }
 
     .texto {
-        padding: 30px;
+        padding: 24px;
     }
 
     .texto h2 {
@@ -623,7 +634,7 @@ td:first-child {
     }
 
     .perfil-card img {
-        height: 350px;
+        height: 300px;
     }
 
     .perfil-info h3 {
@@ -669,7 +680,7 @@ td:first-child {
     }
 
     .texto {
-        padding: 25px;
+        padding: 24px;
     }
 
     .texto h2 {
@@ -707,7 +718,7 @@ td:first-child {
     }
 
     .hero {
-        min-height: 60vh;
+        min-height: 50vh;
     }
 
     .hero-tag {
