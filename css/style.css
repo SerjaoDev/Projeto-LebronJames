@@ -75,18 +75,19 @@ ul{
 .logo{
     display:flex;
     align-items:center;
+    transition:.3s ease;
 }
 
-.logo h1{
-    color:white;
-    font-size:2rem;
-    font-weight:800;
-    letter-spacing:1px;
-    transition:var(--transition);
+.logo img{
+    height:60px;
+    width:auto;
+    display:block;
+    transition:.3s ease;
 }
 
-.logo:hover h1{
-    color:var(--secondary);
+.logo:hover img{
+    transform:scale(1.05);
+    filter:drop-shadow(0 0 12px rgba(253,185,39,.7));
 }
 
 nav{

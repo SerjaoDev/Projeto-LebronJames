@@ -64,14 +64,22 @@ a{
     align-items:center;
 }
 
-.logo h1{
-    color:#FFF;
-    font-size:2rem;
-    transition:.3s;
+.logo{
+    display:flex;
+    align-items:center;
+    transition:.3s ease;
 }
 
-.logo:hover h1{
-    color:var(--secondary);
+.logo img{
+    height:60px;
+    width:auto;
+    display:block;
+    transition:.3s ease;
+}
+
+.logo:hover img{
+    transform:scale(1.05);
+    filter:drop-shadow(0 0 12px rgba(253,185,39,.7));
 }
 
 nav{
